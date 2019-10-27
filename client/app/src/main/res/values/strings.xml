@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">OtpSmartAtm</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="deposit">Deposit</string>
+    <string name="go">Go</string>
+    <string name="smartatm">smartatm</string>
+    <string name="otp">otp</string>
+    <string name="actual_position">Actual position</string>
+    <string name="nothing_found">Nothing found</string>
+    <string name="error">Error!</string>
+
+    <string name="shortcut_label">Find a near ATM now</string>
+    <string name="details">Details</string>
+</resources>

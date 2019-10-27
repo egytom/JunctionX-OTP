@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#00674c</color>
+
+    <color name="otpLightGreen">#5EC738</color>
+    <color name="otpDarkGreen">#00674C</color>
+</resources>

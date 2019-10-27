@@ -1,0 +1,14 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:targetApi="28">
+    <shortcut
+        android:enabled="true"
+        android:shortcutId="atm"
+        android:shortcutLongLabel="@string/shortcut_label"
+        android:shortcutShortLabel="@string/shortcut_label">
+        <intent
+            android:action="hu.bme.aut.otpsmartatm.shortcuts.ATM"
+            android:targetClass="hu.bme.aut.otpsmartatm.ui.MainActivity"
+            android:targetPackage="hu.bme.aut.otpsmartatm" />
+    </shortcut>
+</shortcuts>
