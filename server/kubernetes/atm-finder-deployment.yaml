@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: atm-finder
+  labels:
+    app: atm-finder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: atm-finder
+  template:
+    metadata:
+      labels:
+        app: atm-finder
+    spec:
+      containers:
+      - name: atm-finder
+        image: egytom/atm-finder:1.9
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MONGO_DATABASE
+          valueFrom:
+            configMapKeyRef:
+              name: mongodb
+              key: database-name
+        - name: MONGO_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: mongodb
+              key: database-user
+        - name: MONGO_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mongodb
+              key: database-password
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: atm-finder
+  labels:
+    app: atm-finder
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    app: atm-finder
